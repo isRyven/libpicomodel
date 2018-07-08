@@ -46,9 +46,10 @@ extern "C"
 #include <stddef.h>
 
 
-
 /* version */
-#define PICOMODEL_VERSION       "0.8.20"
+#ifndef PICOMODEL_VERSION
+#error no PICOMODEL_VERSION defined
+#endif
 
 
 /* constants */
