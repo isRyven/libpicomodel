@@ -10,8 +10,6 @@
 #include "../picointernal.h"
 #include "lwo2.h"
 #include <limits.h>
-#include "globaldefs.h"
-
 
 /*
    ======================================================================

@@ -46,11 +46,11 @@ const int MD2_VERSION             = 8;
 
 #define MD2_NUMVERTEXNORMALS 162
 
-const int MD2_MAX_TRIANGLES       = 4096;
-const int MD2_MAX_VERTS           = 2048;
-const int MD2_MAX_FRAMES          = 512;
-const int MD2_MAX_MD2SKINS        = 32;
-const int MD2_MAX_SKINNAME        = 64;
+#define MD2_MAX_TRIANGLES       4096
+#define MD2_MAX_VERTS           2048
+#define MD2_MAX_FRAMES          512
+#define MD2_MAX_MD2SKINS        32
+#define MD2_MAX_SKINNAME        64
 
 typedef struct index_LUT_s
 {

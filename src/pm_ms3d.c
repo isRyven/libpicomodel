@@ -55,18 +55,18 @@
 static picoColor_t white = { 255,255,255,255 };
 
 /* ms3d limits */
-const int MS3D_MAX_VERTS      = 8192;
-const int MS3D_MAX_TRIS       = 16384;
-const int MS3D_MAX_GROUPS     = 128;
-const int MS3D_MAX_MATERIALS  = 128;
-const int MS3D_MAX_JOINTS     = 128;
-const int MS3D_MAX_KEYFRAMES  = 216;
+#define MS3D_MAX_VERTS      8192
+#define MS3D_MAX_TRIS       16384
+#define MS3D_MAX_GROUPS     128
+#define MS3D_MAX_MATERIALS  128
+#define MS3D_MAX_JOINTS     128
+#define MS3D_MAX_KEYFRAMES  216
 
 /* ms3d flags */
-const int MS3D_SELECTED       = 1;
-const int MS3D_HIDDEN         = 2;
-const int MS3D_SELECTED2      = 4;
-const int MS3D_DIRTY          = 8;
+#define MS3D_SELECTED       1
+#define MS3D_HIDDEN         2
+#define MS3D_SELECTED2      4
+#define MS3D_DIRTY          8
 
 /* this freaky loader needs byte alignment */
 #pragma pack(push, 1)

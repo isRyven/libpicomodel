@@ -10,7 +10,6 @@
 
 #include "../picointernal.h"
 #include "lwo2.h"
-#include "globaldefs.h"
 
 /* disable warnings */
 #if GDEF_COMPILER_MSVC
