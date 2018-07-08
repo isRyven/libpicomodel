@@ -1,7 +1,8 @@
 if (MSVC)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHc /ignore:4996")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /EHsc /wd\"4996\" /W3 /fp:fast /WX- /Zc:inline /Gm /errorReport:prompt")
+	set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /O1 /Ot /MP")
 else()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c99 -Wall -O -march=native")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -Wall -O -march=native")
 endif()
 
 add_library(picomodel

@@ -76,10 +76,6 @@
 #define INFO_HEIGHT 5
 #define INFO_Y ( SKINPAGE_HEIGHT - INFO_HEIGHT )
 
-#ifndef byte
-	#define byte unsigned char
-#endif
-
 
 //
 //	Generic header on every chunk
@@ -168,8 +164,8 @@ typedef struct
 // Frame info
 typedef struct
 {
-	byte v[3];                          //	scaled by header info
-	byte lightnormalindex;              //	index in canned table of closest vertex normal
+	picoByte_t v[3];                          //	scaled by header info
+	picoByte_t lightnormalindex;              //	index in canned table of closest vertex normal
 } fm_vert_normal_t;
 
 typedef struct

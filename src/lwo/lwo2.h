@@ -10,7 +10,7 @@
 #ifndef LWO2_H
 #define LWO2_H
 
-#include "globaldefs.h"
+#include "../platfdefs.h"
 
 /* chunk and subchunk IDs */
 

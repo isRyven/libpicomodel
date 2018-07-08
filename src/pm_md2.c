@@ -38,7 +38,6 @@
 
 /* dependencies */
 #include "picointernal.h"
-#include "bytebool.h"
 
 /* md2 model format */
 const char *MD2_MAGIC             = "IDP2";
@@ -81,8 +80,8 @@ typedef struct
 
 typedef struct
 {
-	byte v[3];                          // scaled byte to fit in frame mins/maxs
-	byte lightnormalindex;
+	picoByte_t v[3];                          // scaled byte to fit in frame mins/maxs
+	picoByte_t lightnormalindex;
 } md2XyzNormal_t;
 
 typedef struct md2Frame_s

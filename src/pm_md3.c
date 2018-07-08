@@ -35,8 +35,6 @@
 /* dependencies */
 #include "picointernal.h"
 
-
-
 /* md3 model format */
 const char *MD3_MAGIC = "IDP3";
 const int MD3_VERSION = 15;

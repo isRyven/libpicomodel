@@ -1,3 +1,6 @@
+#ifndef PLATFDEF_H
+#define PLATFDEF_H
+
 // ARCH_ENDIAN
 
 #if defined(__BIG_ENDIAN__) || defined(_SGI_SOURCE)
@@ -117,4 +120,6 @@
 #undef GDEF_DEBUG
 #define GDEF_DEBUG 1
 #endif
+#endif
+
 #endif

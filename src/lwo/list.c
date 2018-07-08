@@ -38,7 +38,7 @@ void lwListFree( void *list, void ( *freeNode )( void * ) ){
    ====================================================================== */
 
 void lwListAdd( void **list, void *node ){
-	lwNode *head, *tail;
+	lwNode *head, *tail = NULL;
 
 	head = *( ( lwNode ** ) list );
 	if ( !head ) {

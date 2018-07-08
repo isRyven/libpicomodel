@@ -34,7 +34,6 @@
 
 /* dependencies */
 #include "picointernal.h"
-#include "globaldefs.h"
 
 /* disable warnings */
 #if GDEF_COMPILER_MSVC

@@ -38,7 +38,7 @@
 #ifndef PICOINTERNAL_H
 #define PICOINTERNAL_H
 
-#include "globaldefs.h"
+#include "platfdefs.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -76,6 +76,7 @@ extern "C"
 
 #define PICO_IOEOF  1
 #define PICO_IOERR  2
+
 
 /* types */
 typedef struct picoParser_s
