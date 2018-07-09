@@ -14,7 +14,7 @@ This is a library used in GtkRadiant(and its derivatives) and Q3Map2 to parse va
 * OBJ (wavefront object)
 
 ## Build
-This repository contains build files to compile `libpocomodel` static library and tests executable, that will reside in `build` directory after successful compilation.
+This repository contains build files to compile `libpicomodel` static library and tests executable, that will reside in `build` directory after successful compilation.
 
 ### Compiling on linux
 ```
@@ -26,7 +26,7 @@ cmake .. && make
 There are several options available.
 
 #### Visual Studio 2017
-In VS2017 you can natively open up the CMake project folder: `Files > Open > CMake`.
+In VS2017 you can natively open up the CMake project folder: `File > Open > CMake`.
 
 #### Compile from command line
 ```
