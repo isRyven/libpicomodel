@@ -296,9 +296,7 @@ float                       PicoGetShaderShininess( picoShader_t *shader );
 void                        *PicoGetSurfaceData( picoSurface_t *surface );
 char                        *PicoGetSurfaceName( picoSurface_t *surface );      /* sea */
 picoSurfaceType_t           PicoGetSurfaceType( picoSurface_t *surface );
-char                        *PicoGetSurfaceName( picoSurface_t *surface );
 picoShader_t                *PicoGetSurfaceShader( picoSurface_t *surface );    /* sea */
-
 int                         PicoGetSurfaceNumVertexes( picoSurface_t *surface );
 picoVec_t                   *PicoGetSurfaceXYZ( picoSurface_t *surface, int num );
 picoVec_t                   *PicoGetSurfaceNormal( picoSurface_t *surface, int num );
