@@ -1,12 +1,7 @@
 #include "catch.hpp"
 #include "picomodel.h"
 #include <string>
-
-template<int n, typename T>
-bool comparevec(T a, T b) {
-	for (int i = 0; i < n; i++) if (a[i] != b[i]) return false;
-	return true;
-}
+#include "utils.h"
 
 // Tests and example usages for libpicomodel public APIs
 
@@ -100,7 +95,7 @@ TEST_CASE("Should free model and allocated shader and surface pointers storage")
 
 /*
 	PicoNewShader allocates shader structure as well as shader pointerstorage (picoShader_t **shader)
-	in the mode if neeeded, so you don't need to call PicoAdjustModel manually.
+	in the model if required, so you don't have to call PicoAdjustModel manually.
 */
 TEST_CASE("Should allocate new shader and attach it to the model") {
 	picoModel_t *model = PicoNewModel();
@@ -126,7 +121,7 @@ TEST_CASE("Should free model, shader pointers storage and shader itself") {
 	PicoFreeModel(model);
 }
 
-/*  Pretty much same as shaders, except it has more allocatable stuff inside: vertices, normals, 
+/*	Pretty much same as shaders, except it has more allocatable stuff inside: vertices, normals, 
 	indexes, texture coords, smoothing groups, colors. */
 TEST_CASE("Should allocate new surface and attach it to the model") {
 	picoModel_t *model = PicoNewModel();
