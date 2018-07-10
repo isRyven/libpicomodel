@@ -67,20 +67,21 @@ TEST_CASE("Should correctly parse simple md3") {
 	REQUIRE(numVerts == 4);
 	int numInds = PicoGetSurfaceNumIndexes(surface);
 	REQUIRE(numInds == 6);
-	REQUIRE(std::string("surf0") == PicoGetSurfaceName(surface));
 
-	picoVec3_t v1{ -1.f, 0.0f, 1.0f };
-	picoVec3_t v2{ 1.f, 0.0f, 1.0f };
-	picoVec3_t v3{ 1.f, 0.0f, -1.0f };
-	picoVec3_t v4{ -1.f, 0.0f, -1.0f };
+	picoVec3_t v1{ 1.f, 0.0f, 1.0f };
+	picoVec3_t v2{ 1.f, 0.0f, -1.0f };
+	picoVec3_t v3{ -1.f, 0.0f, -1.0f };
+	picoVec3_t v4{ -1.f, 0.0f, 1.0f };
 	REQUIRE(comparevec<3>(PicoGetSurfaceXYZ(surface, 0), v1));
 	REQUIRE(comparevec<3>(PicoGetSurfaceXYZ(surface, 1), v2));
 	REQUIRE(comparevec<3>(PicoGetSurfaceXYZ(surface, 2), v3));
 	REQUIRE(comparevec<3>(PicoGetSurfaceXYZ(surface, 3), v4));
 
 	picoVec3_t cvn{ 0.0f, 1.0f, 0.0f };
+	picoVec2_t sts[] = { {1.f, 0.f}, {1.f, 1.f}, {0.0f, 1.0f}, {0.0f, 0.0f} };
 	for (int n = 0; n < numVerts; n++) {
-		REQUIRE(comparevec_approx<3>(PicoGetSurfaceNormal(surface, n), cvn, 0.001f));
+		REQUIRE(comparevec_approx<3>(PicoGetSurfaceNormal(surface, n), cvn, 0.001f)); // normal
+		REQUIRE(comparevec<2>(PicoGetSurfaceST(surface, 0, n), sts[n])); // st
 	}
 
 	PicoFreeModel(model);
