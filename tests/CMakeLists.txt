@@ -10,6 +10,13 @@ include_directories(AFTER "${CMAKE_SOURCE_DIR}/libs/catch2")
 include_directories(AFTER "${CMAKE_SOURCE_DIR}/src")
 
 file(GLOB headers *.h)
-add_executable(run_tests main.cpp pm_tests.cpp pm_md3_tests.cpp pm_mdc_tests.cpp ${headers})
+add_executable(run_tests 
+	main.cpp 
+	pm_tests.cpp 
+	pm_md3_tests.cpp 
+	pm_mdc_tests.cpp 
+	pm_obj_tests.cpp
+	${headers}
+)
 
 target_link_libraries(run_tests picomodel)
