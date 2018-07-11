@@ -22,14 +22,10 @@ TEST_CASE("Should correctly parse simple mdc") {
 	int numInds = PicoGetSurfaceNumIndexes(surface);
 	REQUIRE(numInds == 6);
 
-	picoVec3_t v1{ -1.f, -1.0f, 0.0f };
-	picoVec3_t v2{ 1.0f, -1.f, 0.0f };
-	picoVec3_t v3{ -1.f, 1.0f, 0.0f };
-	picoVec3_t v4{ 1.f, 1.0f, 0.0f };
-	REQUIRE(comparevec<3>(PicoGetSurfaceXYZ(surface, 0), v1));
-	REQUIRE(comparevec<3>(PicoGetSurfaceXYZ(surface, 1), v2));
-	REQUIRE(comparevec<3>(PicoGetSurfaceXYZ(surface, 2), v3));
-	REQUIRE(comparevec<3>(PicoGetSurfaceXYZ(surface, 3), v4));
+	picoVec3_t verts[] = { { -1.f, -1.0f, 0.0f }, { 1.0f, -1.f, 0.0f }, { -1.f, 1.0f, 0.0f }, { 1.f, 1.0f, 0.0f } };
+	for (int i = 0; i < numVerts; i++) {
+		REQUIRE(comparevec<3>(PicoGetSurfaceXYZ(surface, i), verts[i]));
+	}
 
 	picoVec3_t cvn{ 0.0f, 0.0f, 1.0f };
 	picoVec2_t sts[] = { { 0.0f, 1.0f }, { 1.0f, 1.0f }, { 0.f, 0.f }, { 1.f, 0.f } };
