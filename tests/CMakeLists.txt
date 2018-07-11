@@ -16,6 +16,7 @@ add_executable(run_tests
 	pm_md3_tests.cpp 
 	pm_mdc_tests.cpp 
 	pm_obj_tests.cpp
+    pm_ase_tests.cpp
 	${headers}
 )
 
