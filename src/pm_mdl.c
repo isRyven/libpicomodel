@@ -24,6 +24,7 @@
 
 /* dependencies */
 #include "picointernal.h"
+#include <string.h>
 
 #define MDL_NUMVERTEXNORMALS 162
 
@@ -348,6 +349,15 @@ static void* _offset_to(void **buf, size_t size) {
 	return before;
 }
 
+static char* _make_texture_path(const char *in, char *out) {
+	memcpy(out, in, 256);
+	_pico_setfext(out, "");
+	strcat(out, "_img");
+	_pico_unixify(out);
+	out[255] = '\0';
+	return out;
+}
+
 /*
 _mdl_load()
 loads a quake mdl model file.
@@ -366,6 +376,7 @@ static picoModel_t *_mdl_load(PM_PARAMS_LOAD) {
 	mdl_vertex_t *ofsVerts = NULL;
 	mdl_frame_t *frame;
 	int i;
+	char texturePath[256];
 
 	/* -------------------------------------------------
 	mdl loading
@@ -481,7 +492,7 @@ static picoModel_t *_mdl_load(PM_PARAMS_LOAD) {
 		return NULL;
 	}
 
-	// PicoSetShaderName(picoShader, "");
+	PicoSetShaderName(picoShader, _make_texture_path(fileName, texturePath));
 
 	PicoSetSurfaceShader(picoSurface, picoShader);
 

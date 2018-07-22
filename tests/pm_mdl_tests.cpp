@@ -15,8 +15,8 @@ TEST_CASE("Should correctly parse simple mdl") {
 	picoSurface_t *surface = PicoGetModelSurface(model, 0);
 	int numShaders = PicoGetModelNumShaders(model);
 	REQUIRE(numShaders == 1);
-	// picoShader_t *shader = PicoGetSurfaceShader(surface);
-	// REQUIRE(std::string("myshader_1") == PicoGetShaderName(shader));
+	picoShader_t *shader = PicoGetSurfaceShader(surface);
+	REQUIRE(std::string("../tests/assets/model_img") == PicoGetShaderName(shader));
 	int numVerts = PicoGetSurfaceNumVertexes(surface);
 	REQUIRE(numVerts == 6);
 	int numInds = PicoGetSurfaceNumIndexes(surface);
