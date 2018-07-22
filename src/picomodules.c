@@ -48,6 +48,7 @@ extern const picoModule_t picoModuleMD2;
 extern const picoModule_t picoModuleFM;
 extern const picoModule_t picoModuleLWO;
 extern const picoModule_t picoModuleTerrain;
+extern const picoModule_t picoModuleMDL;
 
 
 
@@ -64,6 +65,7 @@ const picoModule_t *picoModules[] =
 	&picoModuleLWO,     /* lightwave object */
 	&picoModuleTerrain, /* picoterrain object */
 	&picoModuleOBJ,     /* wavefront object */
+	&picoModuleMDL,     /* quake mdl */
 	NULL                /* arnold */
 };
 

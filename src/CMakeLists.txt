@@ -27,6 +27,7 @@ add_library(picomodel
     pm_md2.c
     pm_md3.c
     pm_mdc.c
+	pm_mdl.c
     pm_ms3d.c
     pm_obj.c
     pm_terrain.c
