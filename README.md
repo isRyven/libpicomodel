@@ -12,6 +12,7 @@ This is a library used in GtkRadiant(and its derivatives) and Q3Map2 to parse va
 * LWO (lightwave object)
 * Terrain (picoterrain object)
 * OBJ (wavefront object)
+* MDL (quake1)
 
 ## Build
 This repository contains build files to compile `libpicomodel` static library and tests executable, that will reside in `build` directory after successful compilation.
